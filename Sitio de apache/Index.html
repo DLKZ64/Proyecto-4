@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apache</title>
+</head>
+<body>
+    <center><h1>Servidor Apache</h1></center>
+    <br>
+    <h2>Concepto</h2>
+    <p>El proyecto de servidor Apache HTTP es un esfuerzo de desarrollo de software colaborativo 
+        destinado a crear una implementación de código fuente robusta, de grado comercial, con funciones 
+        y disponible gratuitamente de un servidor HTTP (Web). El proyecto está gestionado conjuntamente por 
+        un grupo de voluntarios ubicados en todo el mundo, que utilizan Internet y la Web para comunicar, 
+        planificar y desarrollar el servidor y su documentación relacionada. Este proyecto es parte de Apache 
+        Software Foundation. Además, cientos de usuarios han contribuido con ideas, código y documentación 
+        al proyecto. Este archivo pretende describir brevemente la historia del servidor Apache HTTP y 
+        reconocer a los muchos contribuyentes.</p>
+        <br>
+    <h2>Historia</h2>
+    <p>En febrero de 1995, el software de servidor más popular en la Web era el demonio HTTP 
+        de dominio público desarrollado por Rob McCool en el Centro Nacional para Aplicaciones 
+        de Supercomputación de la Universidad de Illinois, Urbana-Champaign. Sin embargo, 
+        el desarrollo de ese httpd se había estancado después de que Rob dejó NCSA a mediados de 
+        1994, y muchos webmasters habían desarrollado sus propias extensiones y correcciones de 
+        errores que necesitaban una distribución común. Un pequeño grupo de estos webmasters, 
+        contactados por correo electrónico privado, se reunieron con el fin de coordinar sus 
+        cambios (en forma de "parches"). Brian Behlendorf y Cliff Skolnick crearon una lista de correo, 
+        un espacio de información compartida e inicios de sesión para los desarrolladores 
+        principales en una máquina en el Área de la Bahía de California, con ancho de banda donado 
+        por HotWired. A finales de febrero, Usando NCSA httpd 1.3 como base, agregamos todas las correcciones
+        de errores publicadas y mejoras valiosas que pudimos encontrar, probamos el resultado en nuestros 
+        propios servidores e hicimos el primer lanzamiento público oficial (0.6.2) del servidor Apache en 
+        abril de 1995 Por coincidencia, NCSA reinició su propio desarrollo durante el mismo período, y 
+        Brandon Long y Beth Frank del Equipo de desarrollo de servidores de NCSA se unieron a la lista en 
+        marzo como miembros honorarios para que los dos proyectos pudieran compartir ideas y soluciones.
+        <br>
+        El primer servidor Apache fue un gran éxito, pero todos sabíamos que el código base necesitaba
+        una revisión general y un rediseño. Durante mayo-junio de 1995, mientras Rob Hartill y el resto 
+        del grupo se concentraban en implementar nuevas funciones para 0.7.x (como procesos secundarios 
+        previamente bifurcados) y brindar soporte a la creciente comunidad de usuarios de Apache, 
+        Robert Thau diseñó una nueva arquitectura de servidor (código -llamado Shambhala) que incluía 
+        una estructura modular y API para una mejor extensibilidad, asignación de memoria basada en 
+        grupos y un modelo de proceso adaptativo previo a la bifurcación. El grupo cambió a esta nueva 
+        base de servidores en julio y agregó las funciones de 0.7.x, lo que resultó en Apache 0.8.8 
+        (y sus hermanos) en agosto.
+        <br>
+        Después de extensas pruebas beta, muchos puertos para plataformas ocultas, un nuevo 
+        conjunto de documentación (por David Robinson) y la adición de muchas funciones en 
+        forma de nuestros módulos estándar, Apache 1.0 fue lanzado el 1 de diciembre de 1995.
+        <br>
+        Menos de un año después de que se formó el grupo, el servidor Apache superó al httpd de 
+        NCSA como el servidor número 1 en Internet y, según la encuesta realizada por Netcraft, 
+        conserva esa posición en la actualidad.
+        <br>
+        En 1999, los miembros de Apache Group formaron la Apache Software Foundation para brindar 
+        soporte organizacional, legal y financiero para el servidor Apache HTTP. La fundación colocó el 
+        software sobre una base sólida para el desarrollo futuro y amplió considerablemente la cantidad de 
+        proyectos de software de código abierto, que se encuentran bajo el paraguas de esta fundación.
+
+    </p>
+    <h2>Caracteristicas</h2>
+    <p>Es un servidor web con soporte para HTTP 1.1 y posteriormente añadir soporte para HTTP2 
+    según la norma RFC 7540 y fue uno de los primeros servidores en soportar VirtualHost 
+    (llamado también como sitio virtual) tanto para dominios como para IP respetando la normal norma RFC 2616, 
+    lo que permite alojar varios dominios en un mismo servidor con una misma IP, algo que hoy nos 
+    parece básico pero que en los noventas supuso una revolución.</p>
+    <ul>
+        <li>Es gratuito y de fuente abierta.</li>
+        <li>Instalación y configuración sencilla</li>
+        <li>Altamente extensible y adaptable mediante módulos</li>
+        <li>Funciones incorporadas para autentificación y validación de users.</li>
+        <li>Soporte para lenguajes como Perl, PHP y Python.</li>
+    </ul>
+    <h2>Ultima Versión</h2>
+    <p>Apache HTTP Server 2.4</p>
+    <h4>Mejoras principales</h4>
+    <dl>
+        <dt>MPM cargables en tiempo de ejecución:</dt>
+        <dd>Ahora se pueden crear varios MPM como módulos cargables en tiempo de compilación. El MPM elegido se puede configurar en tiempo de ejecución a través de LoadModuleuna directiva.</dd>
+        <dt>Configuración LogLevel por módulo y por directorio:</dt>
+        <dd>Ahora se LogLevelpueden configurar por módulo y por directorio. trace1 Se trace8agregaron nuevos niveles por encima del debugnivel de registro.</dd>
+        <dt>Secciones de configuración por solicitud:</dt>
+        <dd><If>Las secciones ElseIf, y Else se pueden usar para establecer la configuración en función de los criterios de cada solicitud.</dd>
+        <dt>Uso de memoria reducido:</dt>
+        <dd>A pesar de muchas características nuevas, 2.4.x tiende a usar menos memoria que 2.2.x.</dd>
+    </dl>
+    <br>
+    <h2>Ventajas Y Desventajas</h2>
+    <p>Ventajas:</p>
+    <ul>
+        <dt>Soporte:</dt>
+        <dd>Es uno de los servidores más usados desde hace más de dos décadas por lo que detrás existe una comunidad muy grande acompañado una extensa documentación.</dd>
+        <dt>Multiplataforma:</dt>
+        <dd>Funciona tanto en Microsoft Windows, Unix/Linux y Mac por lo cual es un excelente servicio tanto para servidor como para un entorno de desarrollo en cualquier escritorio.</dd>
+        <dt>Funcionalidades:</dt>
+        <dd>Contiene una gran cantidad de módulos tanto oficiales como de terceros que permiten ampliar las funcionalidades del servidor.</dd>
+        <dt>Sencillez:</dt>
+        <dd>Es uno de los servidores más sencillos de instalar y configurar, sobre todo en distribuciones Linux donde forma parte de los repositorios de cada distribución y en el caso de Windows se lo puede encontrar empaquetado junto con el servidor MySQL y PHP en un solo instalador que facilita enormemente la instalación.</dd>
+        <dt>Seguridad:</dt>
+        <dd>Apache integra funcionalidades para brindar seguridad al software gracias a los módulos de Autorización y Autenticación y  funciones de Control de Acceso , además de un soporte para cifrado por certificados SSL/TLS.</dd>
+    </ul>
+    <p>Desventajas:</p>
+    <p>La única desventaja notable es el pobre rendimiento frente a otras alternativas existentes en el mercado que son más veloces y con la capacidad de manejar mucho más tráfico con los mismos recursos.</p>
+
+</body>
+</html>
